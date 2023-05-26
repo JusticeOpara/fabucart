@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+   flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  max-width:1140px ;
+  gap:50px;
+}
+
+
+.totalPrice {
+  text-align: right;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-top: 1rem;
+  font-size: 20px;
+}
+
+.logout-btn {
+  padding: 10px;
+  background: orangered;
+  border: none;
+}
+
+.logout-btn:hover {
+  background: rgb(0, 6, 59);
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
