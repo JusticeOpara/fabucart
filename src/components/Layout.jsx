@@ -18,6 +18,7 @@ const Layout = () => {
   console.log(showCart, "--SHOWCART")
 
   return (
+    
     <React.Fragment>
       <div className={styles.flex}>
 
@@ -29,7 +30,7 @@ const Layout = () => {
             <h3>Total: ${total}</h3>
 
             <button className={styles.orderBtn}>Place Order</button>
-          </div>{" "}
+          </div>
         </div>
 
       </div>

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import styles from"./Cart.module.css";
 import  {cartActions}  from "../store/cart-slice";
 
+
 const CartItem = ({ name, quantity, total, price, id }) => {
   const dispatch = useDispatch();
 

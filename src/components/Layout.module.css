@@ -32,4 +32,15 @@
   justify-content: center;
   /* background-color: aqua; */
 }
+.orderBtn {
+  width: 200px;
+  height: 50px;
+  background: orangered;
+  border: none;
+  cursor: pointer;
+}
+.orderBtn:hover {
+  background: rgb(89, 0, 190);
+}
+
 
