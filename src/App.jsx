@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Cart from "./components/Cart";
 import Notification from "./components/Notification";
 import { uiActions } from "./store/userinterface-slice";
-// import { BrowserRouter, Route, Routes} from 'react-router-dom'
+
 
 
 let firstRender = true
