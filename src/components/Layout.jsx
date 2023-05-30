@@ -14,9 +14,7 @@ const Layout = () => {
     total += item.totalPrice;
   });
 
-  const showCart = useSelector((state) => state.cart.showCart)
-  console.log(showCart, "--SHOWCART")
-
+  
   return (
     
     <React.Fragment>
@@ -25,7 +23,7 @@ const Layout = () => {
         <div className={styles.layout}>
           <Header />
           <Products />
-          {showCart && <CartItems />}
+          {/* {showCart && <CartItems />} */}
           <div className={styles.totalPrice}>
             <h3>Total: ${total}</h3>
 

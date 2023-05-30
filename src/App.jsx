@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import Cart from "./components/Cart";
 import Notification from "./components/Notification";
 import { uiActions } from "./store/userinterface-slice";
+import { Routes, Route } from 'react-router-dom'
+import CartItems from "./components/CartItems";
 
 
 
@@ -22,6 +24,8 @@ function App() {
 
   // const cartItems = useSelector((state) => state.cart.itemsList)
   // console.log(cartItems, "--cartItems")
+  const showCart = useSelector((state) => state.cart.showCart)
+  console.log(showCart, "--SHOWCART")
 
   useEffect(() => {
 
@@ -67,13 +71,27 @@ function App() {
 
   return (
     <div className="App">
-      {notification && (
-        <Notification type={notification.type} message={notification.message} />
-      )}
+      {/* //   {notification && (
+    //     <Notification type={notification.type} message={notification.message} />
+    //   )}
 
-      {!IsLoggedIn && <Auth />}
-      {IsLoggedIn && <Layout />}
+    //   {!IsLoggedIn && <Auth />}
+    //   {IsLoggedIn && <Layout />}
+    //   {showCart && <CartItems />} */}
+        {notification && (
+          <Notification type={notification.type} message={notification.message} />
+        )}
+
+      <Routes>
+
+
+        {!IsLoggedIn && <Route path='*' element={<Auth />} />}
+        {IsLoggedIn && <Route path='/' element={<Layout />} />}
+        {showCart && <Route path='/cartItems' element={<CartItems />} />}
+
+      </Routes>
     </div>
+
   );
 }
 
