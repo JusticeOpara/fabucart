@@ -1,20 +1,21 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import styles from"./Cart.module.css";
-import  {cartActions}  from "../store/cart-slice";
+import styles from "./Cart.module.css";
+import { cartActions } from "../store/cart-slice";
 
 
-const CartItem = ({ name, quantity, total, price, id }) => {
+const CartItem = ({ name, quantity, total, price, id, imgURL }) => {
   const dispatch = useDispatch();
 
-  
- 
+
+
   const incrementCartItem = () => {
     dispatch(
       cartActions.addToCart({
         id,
         name,
         price,
+        imgURL
       })
     );
   };
@@ -26,55 +27,41 @@ const CartItem = ({ name, quantity, total, price, id }) => {
 
   return (
     <div className={styles.cartItem}>
-      <h2> {name}</h2>
-      <p>${price} /-</p>
-      <p>x{quantity}</p>
-      <article>Total ${total}</article>
+      {/* <div className={styles.itemsList}> */}
+      <div className={styles.item}>
 
-      <button className={styles.cartActions} onClick={ decrementCartItem}>
-      -
-      </button>
+        <img src={imgURL} className={styles.imageItem} />
 
-      <button className={styles.cartActions} onClick={incrementCartItem}>
-       +
-      </button>
+        <h2>Total ${total}</h2>
+
+      </div>
+
+
+      <h2 className={styles.text}> {name}</h2>
+
+      <div className={styles.xyz00000}>
+
+        <p>x{quantity}</p>
+
+        <button className={styles.cartActions} onClick={decrementCartItem}>
+          -
+        </button>
+
+        <button className={styles.cartActions} onClick={incrementCartItem}>
+          +
+        </button>
+
+      </div>
+
+
 
     </div>
+
+    // </div>
   );
 };
 
 
-// const CartItem = ({ name, quantity, total, price, id }) => {
-
-//   const dispatch = useDispatch();
-
-//   const incrementCartItem = () => {
-//     dispatch(
-//       cartActions.addToCart({
-//         name,
-//         id,
-//         price,
-//       })
-//     );
-//   };
-
-//   const decrementCartItem = () => {
-//     dispatch(cartActions.removeCart(id));
-//   };
-
-//   return (
-//     <div className="cartItem">
-//       <h2> {name}</h2>
-//       <p>${price} /-</p>
-//       <p>x{quantity}</p>
-//       <article>Total ${total}</article>
-//       <button onClick={decrementCartItem} className="cart-actions">
-//         -
-//       </button>
-//       <button onClick={incrementCartItem} className="cart-actions">
-//         +
-//       </button>
-//     </div>
-//   );
-// };
 export default CartItem;
+
+

@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import Auth from "./components/Auth";
 import Layout from "./components/Layout";
 import { useDispatch, useSelector } from "react-redux";
@@ -70,26 +70,21 @@ function App() {
   }, [Cart])
 
   return (
-    <div className="App">
-      {/* //   {notification && (
-    //     <Notification type={notification.type} message={notification.message} />
-    //   )}
+    <div className={styles.App}>
 
-    //   {!IsLoggedIn && <Auth />}
-    //   {IsLoggedIn && <Layout />}
-    //   {showCart && <CartItems />} */}
-        {notification && (
-          <Notification type={notification.type} message={notification.message} />
-        )}
+      {notification && (
+        <Notification type={notification.type} message={notification.message} />
+      )}
 
       <Routes>
-
 
         {!IsLoggedIn && <Route path='*' element={<Auth />} />}
         {IsLoggedIn && <Route path='/' element={<Layout />} />}
         {showCart && <Route path='/cartItems' element={<CartItems />} />}
 
       </Routes>
+
+     
     </div>
 
   );

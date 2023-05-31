@@ -9,18 +9,19 @@
 
 }
 
-h2{
+h2 {
   /* background-color: blue; */
   font-size: 15px;
 }
 
-.img{
+.img {
   max-width: 50%;
   height: 8rem;
   display: block;
- 
+
 }
-.price{
+
+.price {
   font-size: 20px;
 
 }
@@ -32,23 +33,24 @@ h2{
   color: rgb(53, 40, 40);
   border: none;
   cursor: pointer;
-background-color: rgba(21, 26, 42, 0.787); 
-    background-color: #2f9b77;
-    border-radius: 8px;
+  background-color: rgba(21, 26, 42, 0.787);
+  background-color: #2f9b77;
+  border-radius: 8px;
 }
+
 .card {
   width: 250px;
   height: 250px;
   display: flex;
-  padding: 10px; 
+  padding: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   box-shadow: 5px 5px 10px #ccc;
   border-radius: 8px;
   cursor: pointer;
-  /* background-color: blue; */
-
+  background-color: blue;
+    
 }
 
 .card.img {
@@ -56,19 +58,22 @@ background-color: rgba(21, 26, 42, 0.787);
   height: 40%;
   background-color: crimson;
 }
-.card > p {
+
+.card>p {
   padding: 10px;
   font-size: 30px;
 }
+
 .card:hover {
   box-shadow: 10px 10px 20px #ccc;
 }
-.cardList{
- display:flex;
- flex-direction: row;
- justify-content: space-between;
- align-items: center;
- /* background-color: aquamarine; */
+
+.cardList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aquamarine; */
 }
 
 .orderBtn {
@@ -77,6 +82,7 @@ background-color: rgba(21, 26, 42, 0.787);
   border: none;
   cursor: pointer;
 }
+
 .orderBtn:hover {
   background: rgb(89, 0, 190);
 }

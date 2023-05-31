@@ -8,15 +8,6 @@
   gap:50px;
 }
 
-
-.totalPrice {
-  text-align: right;
-  margin-right: 50px;
-  margin-bottom: 20px;
-  margin-top: 1rem;
-  font-size: 20px;
-}
-
 .logout-btn {
   padding: 10px;
   background: orangered;
@@ -28,19 +19,26 @@
 }
 .flex{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   /* background-color: aqua; */
 }
-.orderBtn {
-  width: 200px;
-  height: 50px;
-  background: orangered;
-  border: none;
-  cursor: pointer;
+
+.footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 60px;
+  width: 100%;
 }
-.orderBtn:hover {
-  background: rgb(89, 0, 190);
+.footerText{
+   font-size: 18px; 
+  font-weight: 500;
+  font-family: sans-serif;
 }
 
 

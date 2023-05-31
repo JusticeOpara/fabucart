@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { uiActions } from "./userinterface-slice";
+
+
 const cartSlice = createSlice({
     name: "cart",
     initialState: {
@@ -24,7 +26,8 @@ const cartSlice = createSlice({
                     totalPrice: newItem.price,
                     quantity: 1,
                     name: newItem.name,
-                    price: newItem.price
+                    price: newItem.price,
+                    imgURL: newItem.imgURL
                 })
                 state.totalQuantity++
             }
