@@ -7,6 +7,18 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.navlogo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  width:12%;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Satoshi', sans-serif;
+color: #ffffff;
+}
 .cartlogo{
  max-width: 50px;
   height: auto;
@@ -44,3 +56,7 @@ background-color: crimson;
 color: #ffffff;
 
 } 
+.headerText{
+  
+  font-family: 'Satoshi', sans-serif;
+}

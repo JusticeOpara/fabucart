@@ -12,6 +12,7 @@ const Auth = () => {
     dispatch(authActions.loggedIn())
 
   }
+  
 
   return (
     <div className={styles.container}>

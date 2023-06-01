@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { authActions } from "../store/auth-slice";
 import shopping from '../assets/shopping.png';
 import cartlogo from '../assets/cartlogo.png';
+
 // import cart from '../assets/cart.png'
 const Header = () => {
 
@@ -16,46 +17,26 @@ const Header = () => {
   console.log(handleLogout, "----logout")
 
   return (
-    // <header>
-    //   <nav className="header-nav">
-    //     <ul className="header-ul">
-    //       <li>
-    //         <h2
-    //           className="header-h2"
-    //           style={{ fontFamily: "monospace", fontSize: "30px" }}
-    //         >
-    //           Redux Shopping App
-    //         </h2>
-    //       </li>
-    //       <li>
-    //        
-    //       </li>
-    //       <li>
-    //         <button onClick={handleLogout} className="logout-btn">
-    //           Logout
-    //         </button>{" "}
-    //       </li>
-    //     </ul>
-    //   </nav>
-    // </header>
 
     <>
       <nav className={styles.navbar}>
-        <div>
+        <div className={styles.navlogo}>
           <img src={cartlogo} className={styles.cartlogo} alt="logo" />
           <p>Fabucart</p>
 
         </div>
-        
-          <Cart />
-          {/* <img src={cart} className="cartlogo" alt="logo" /> */}
 
+        <Cart />
+       
       </nav>
+
+    
+
       <div className={styles.header}>
 
         <div className={styles.firstpath}>
 
-          <h1 className="">
+          <h1 className={styles.headerText}>
 
             <span class={styles.greetings}> Welcome to </span>
 

@@ -56,18 +56,13 @@ const cartSlice = createSlice({
         setShowCart(state) {
             state.showCart = !state.showCart
         },
-        sendCartData(cart) {
-            return (dispatch) => {
-                uiActions.showNotification({
-                    open: true,
-                    message: "Sent Request to database sucessful",
-                    type: "sucesss",
-                })
-            }
-        }
+       
+        
     }
 
 })
+
+
 
 // Save cart to localStorage
 const saveCartToLocalStorage = cart => {

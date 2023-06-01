@@ -22,7 +22,9 @@ h2 {
 }
 
 .price {
-  font-size: 20px;
+  font-size: 16px;
+  color: #2f9b77;
+  font-weight: 600;
 
 }
 .name{

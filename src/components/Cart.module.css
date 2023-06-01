@@ -18,11 +18,11 @@ li {
   color: #3498DB;
 }
 
-.cartIcon h3 {
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 10px;
+.cartIcon  {
+  border: none;
   cursor: pointer;
+   background-color: #3498DB; 
+   
 }
 
 .cartContainer {
@@ -106,6 +106,19 @@ li {
   flex-direction: row;
   justify-content: space-between;
 
+}
+.cartlogo{
+  max-width: 60px;
+  height: auto;
+  color: #41B883;
+  /* border-radius: 50px; */
+  background-color: #3498DB;
+  padding:0px;
+  border: none;
+}
+.cartbtn{
+  border:none;
+  padding:0px;
 }
 
 .totalPrice {
