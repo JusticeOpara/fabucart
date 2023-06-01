@@ -25,7 +25,7 @@ const Product = ({ name, id, imgURL, price }) => {
 
       <div className={styles.cardList}>
 
-        <p>{name}</p>
+        <p className={styles.name}>{name}</p>
 
         <p className={styles.price}>${price}</p>
       </div>

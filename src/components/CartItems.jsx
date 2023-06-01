@@ -16,7 +16,8 @@ const CartItems = () => {
 
   return (
     <div className={styles.cartContainer}>
-      <h2>Your Cart</h2>
+
+      <h1 className={styles.hero}>My Cart</h1>
       <ul>
 
         {cartItems.map((item) => (
@@ -38,11 +39,11 @@ const CartItems = () => {
         ))}
       </ul>
 
-       <div className={styles.totalPrice}>
+      <button className={styles.totalPrice}>
+
         <h3>Total: ${total}</h3>
 
-        <button className={styles.orderBtn}>Place Order</button>
-      </div>  
+      </button>
     </div>
   );
 };

@@ -4,11 +4,13 @@ import { uiActions } from "./userinterface-slice";
 
 const cartSlice = createSlice({
     name: "cart",
+
     initialState: {
         itemsList: [],
         totalQuantity: 0,
         showCart: false
     },
+
     reducers: {
         addToCart(state, action) {
             const newItem = action.payload
@@ -30,8 +32,9 @@ const cartSlice = createSlice({
                     imgURL: newItem.imgURL
                 })
                 state.totalQuantity++
-            }
 
+            }
+            saveCartToLocalStorage(state.itemsList)
         },
 
         removeCart(state, action) {
@@ -47,6 +50,7 @@ const cartSlice = createSlice({
                 existingItem.totalPrice -= existingItem.price;
             }
 
+            saveCartToLocalStorage(state.itemsList);
         },
 
         setShowCart(state) {
@@ -64,6 +68,25 @@ const cartSlice = createSlice({
     }
 
 })
+
+// Save cart to localStorage
+const saveCartToLocalStorage = cart => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  };
+  
+  // Load cart from localStorage
+  const loadCartFromLocalStorage = () => {
+    const cartData = localStorage.getItem('cart');
+    return cartData ? JSON.parse(cartData) : [];
+  };
+  
+  // Initialize cart state from localStorage
+ export const initialStateWithCart = {
+    itemsList: loadCartFromLocalStorage(),
+    totalQuantity: 0,
+    showCart: false,
+  };
+
 
 export const cartActions = cartSlice.actions
 export default cartSlice

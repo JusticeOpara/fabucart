@@ -12,6 +12,12 @@ li {
   padding: 10px;
 }
 
+.hero {
+  font-size: 30px;
+  font-weight: 900;
+  color: #3498DB;
+}
+
 .cartIcon h3 {
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -20,7 +26,7 @@ li {
 }
 
 .cartContainer {
-  background-color: grey;
+  background-color: #ffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,18 +36,24 @@ li {
 
 .cartItem {
   width: 60vw;
-  height: 40vh;
+  height: 35vh;
   font-size: 20px;
   font-weight: bold;
-  background-color: pink;
+  box-shadow: 5px 5px 10px #ccc;
   color: #fbeaeb;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* align-items: center;  */
+  justify-content: space-around;
+  align-items: center;
   border-radius: 5px;
   cursor: pointer;
+  color: #2f9b77;
 }
+
+.cardItem:hover {
+  box-shadow: 10px 10px 20px #ccc;
+}
+
 
 .text {
   font-size: .875rem;
@@ -51,49 +63,66 @@ li {
 
 .cartActions {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   width: 50px;
   border: none;
-  background: rgb(10, 7, 24);
+  background-color: #2f9b77;
+  border-radius: 50%;
 }
 
-/* .totalPrice {
-  text-align: right;
-  margin-right: 50px;
-  margin-bottom: 20px;
-  margin-top: 1rem;
-  font-size: 20px;
-} */
-
-.orderBtn {
-  width: 200px;
-  height: 50px;
-  background: orangered;
-  border: none;
-  cursor: pointer;
-}
-
-.orderBtn:hover {
-  background: rgb(89, 0, 190);
-}
 
 .imageItem {
-  background-color: black;
-  width: 20%;
-  height: auto;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.imgBox {
+  position: relative;
+  width: 50%;
+  height: 100px;
+}
+
+.amount {
+  font-size: 20px;
+  color: #2f9b77;
 }
 
 .item {
-  background-color: darkcyan;
+  /* background-color: red; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  height: 30%;
+  align-items: normal;
+  width: 95%;
+  height: 60%;
 }
 
-.itemsList {
-  background-color: darkmagenta;
+.countAction {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
+}
+
+.totalPrice {
+
+  width: 200px;
+  height: 60px;
+  background-color: #3498DB;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #ffff;
+}
+
+
+.subItem {
+
+  height: 100%;
+  width: 80%;
 }

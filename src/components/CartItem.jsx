@@ -27,37 +27,54 @@ const CartItem = ({ name, quantity, total, price, id, imgURL }) => {
 
   return (
     <div className={styles.cartItem}>
-      {/* <div className={styles.itemsList}> */}
+      
       <div className={styles.item}>
 
-        <img src={imgURL} className={styles.imageItem} />
+        <div className={styles.subItem}>
 
-        <h2>Total ${total}</h2>
+          <div className={styles.imgBox}>
+
+            <img src={imgURL} className={styles.imageItem} />
+
+          </div>
+
+          <h2 className={styles.text}> {name}</h2>
+        </div>
+
+
+        <h4 className={styles.amount}>Total ${total}</h4>
+
+
+
+      </div>
+
+
+
+      <div className={styles.countAction}>
+
+        <p>Quantity : {quantity}</p>
+
+        <div>
+          <button className={styles.cartActions} onClick={decrementCartItem}>
+            -
+          </button>
+
+          <button className={styles.cartActions} onClick={incrementCartItem}>
+            +
+          </button>
+
+        </div>
+
 
       </div>
 
 
-      <h2 className={styles.text}> {name}</h2>
-
-      <div className={styles.xyz00000}>
-
-        <p>x{quantity}</p>
-
-        <button className={styles.cartActions} onClick={decrementCartItem}>
-          -
-        </button>
-
-        <button className={styles.cartActions} onClick={incrementCartItem}>
-          +
-        </button>
-
-      </div>
-
+      {/* </div> */}
 
 
     </div>
 
-    // </div>
+
   );
 };
 
