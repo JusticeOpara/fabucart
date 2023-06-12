@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { uiActions } from "./userinterface-slice";
+// import { uiActions } from "./userinterface-slice";
 
 
 const cartSlice = createSlice({
@@ -16,7 +16,7 @@ const cartSlice = createSlice({
             const newItem = action.payload
             // to check if the item is already available
 
-            const existingProduct = state.itemsList.find(item => item.id === newItem.id);
+         const existingProduct = state.itemsList.find(item => item.id === newItem.id);
 
             console.log(existingProduct, "--product wey dey ground")
             if (existingProduct) {
@@ -42,13 +42,16 @@ const cartSlice = createSlice({
             const id = action.payload
             const existingItem = state.itemsList.find(item => item.id === id);
 
-            if (existingItem.quantity == 1) {
-                state.itemsList = state.itemsList.filter(item => item.id !== id)
-                state.totalQuantity--;
-            } else {
-                existingItem.quantity--;
-                existingItem.totalPrice -= existingItem.price;
+            if (existingItem) {
+                if (existingItem.quantity == 0) {
+                    state.itemsList = state.itemsList.filter(item => item.id !== id)
+                    state.totalQuantity--;
+                } else {
+                    existingItem.quantity--;
+                    existingItem.totalPrice -= existingItem.price;
+                }
             }
+
 
             saveCartToLocalStorage(state.itemsList);
         },
@@ -56,31 +59,30 @@ const cartSlice = createSlice({
         setShowCart(state) {
             state.showCart = !state.showCart
         },
-       
-        
+
+
     }
 
 })
 
-
-
+ 
 // Save cart to localStorage
 const saveCartToLocalStorage = cart => {
     localStorage.setItem('cart', JSON.stringify(cart));
-  };
-  
-  // Load cart from localStorage
-  const loadCartFromLocalStorage = () => {
+};
+
+// Load cart from localStorage
+const loadCartFromLocalStorage = () => {
     const cartData = localStorage.getItem('cart');
     return cartData ? JSON.parse(cartData) : [];
-  };
-  
-  // Initialize cart state from localStorage
- export const initialStateWithCart = {
+};
+
+// Initialize cart state from localStorage
+export const initialStateWithCart = {
     itemsList: loadCartFromLocalStorage(),
     totalQuantity: 0,
     showCart: false,
-  };
+};
 
 
 export const cartActions = cartSlice.actions

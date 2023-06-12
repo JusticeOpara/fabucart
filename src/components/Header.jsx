@@ -16,13 +16,15 @@ const Header = () => {
   }
   console.log(handleLogout, "----logout")
 
+
+
   return (
 
     <>
       <nav className={styles.navbar}>
         <div className={styles.navlogo}>
           <img src={cartlogo} className={styles.cartlogo} alt="logo" />
-          <p>Fabucart</p>
+          <p style={{fontSize: '20px',color:"white",fontWeight:"bold"}}>Fabucart</p>
 
         </div>
 
@@ -31,24 +33,22 @@ const Header = () => {
       </nav>
 
     
-
       <div className={styles.header}>
 
         <div className={styles.firstpath}>
 
           <h1 className={styles.headerText}>
 
-            <span class={styles.greetings}> Welcome to </span>
+            <span className={styles.greetings}> Welcome to </span>
 
             <span className={styles.brandname}> Fabucart </span>
           </h1>
 
-          <h1 className={styles.brandbold}> Let's Level up
-            your Game  </h1>
+          <h1 className={styles.brandbold}> Join Us on an Extraordinary Journey, </h1>
 
-          <p className={styles.brandtext}> Shop with us today and Enjoy </p>
+          <h2 className={styles.brandtext}> Where Shopping Becomes an Unforgettable Thrill Ride. </h2>
 
-          <h1 className={styles.discount}> Up to <span className={styles.percent}> 25% </span> discount </h1>
+          <h1 className={styles.discount}> We Offer Up to <span className={styles.percent}> 25% </span> discount </h1>
 
         </div>
 
@@ -57,11 +57,9 @@ const Header = () => {
           <img src={shopping} className={styles.cartImage} alt="cartImage" />
 
         </div>
+        
 
       </div>
-
-
-
 
 
     </>

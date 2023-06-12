@@ -8,6 +8,13 @@
   flex-wrap: wrap;
   font-family: 'Satoshi', sans-serif;
 }
+.productBtn{
+ /* background-color: #2f9b77;  */
+   margin-bottom: 1rem; 
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 h2 {
   /* background-color: blue; */
@@ -79,4 +86,36 @@ h2 {
 
 .orderBtn:hover {
   background: rgb(89, 0, 190);
+}
+.addCart {
+  border: 2px;
+  border-radius: 3rem;
+  padding: 3px;
+  font-size: small;
+  color: #fff;
+  background-color: #2f9b77;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+}
+
+.addCart:hover {
+  background-color: #fff;
+  color: #013D29;
+  border-color: #013D29;
+}
+.removeCart{
+  border-width: 2px;
+  border-radius: 3rem;
+  padding: 3px;
+  font-size: small;
+  color: white;
+  background-color: red;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+
+}
+.removeCart:hover{
+  background-color: white;
+  color: red;
+  border-color: red;
 }

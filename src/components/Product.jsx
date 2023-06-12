@@ -1,10 +1,26 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./Product.module.css";
 import { cartActions } from "../store/cart-slice";
+import toast, { Toaster } from 'react-hot-toast'
+
+
+
 
 const Product = ({ name, id, imgURL, price }) => {
+
   const dispatch = useDispatch()
+  const addfCart = () => toast.success('Added to Cart');
+  const removefCart = () => toast('Item Removed');
+
+  //    function getItemsQty  (id) {
+  //   return cartItems.find(item => item.id ===id)
+  //  }
+  const qty = useSelector(state => state.cart.totalQuantity)?.qty || 0;
+  console.log(qty, "--quantity")
+
+
+
 
   const addToCart = () => {
     dispatch(cartActions.addToCart({
@@ -15,6 +31,12 @@ const Product = ({ name, id, imgURL, price }) => {
       imgURL
     }))
   }
+
+
+  const removeCart = () => {
+    dispatch(cartActions.removeCart(id));
+  };
+
 
 
   return (
@@ -30,9 +52,18 @@ const Product = ({ name, id, imgURL, price }) => {
         <p className={styles.price}>${price}</p>
       </div>
 
-      <button className={styles.btn} onClick={addToCart}>
-        Add To Cart
-      </button>
+      <div className={styles.productBtn}>
+
+        {qty === 0 ? (
+          <button className={styles.addCart} onClick={() => { addToCart(id); addfCart() }} > Add to Cart </button>
+        ) : (<div className="">
+
+          <div> <button className={styles.removeCart} onClick={() => { removeCart(id); removefCart() }} > Remove From Cart </button> </div>
+
+        </div>)}
+      </div>
+      <Toaster />
+
 
 
     </div>

@@ -7,8 +7,6 @@ import { cartActions } from "../store/cart-slice";
 const CartItem = ({ name, quantity, total, price, id, imgURL }) => {
   const dispatch = useDispatch();
 
-
-
   const incrementCartItem = () => {
     dispatch(
       cartActions.addToCart({
@@ -27,7 +25,7 @@ const CartItem = ({ name, quantity, total, price, id, imgURL }) => {
 
   return (
     <div className={styles.cartItem}>
-      
+
       <div className={styles.item}>
 
         <div className={styles.subItem}>

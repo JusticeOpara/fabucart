@@ -3,7 +3,9 @@ import styles from "./Cart.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/cart-slice";
 import { Link } from "react-router-dom";
-import cartbox from '../assets/cartbox.png'
+// import cartbox from '../assets/cartbox.png'
+import { BsFillBucketFill } from "react-icons/bs";
+
 
 const Cart = () => {
 
@@ -21,8 +23,10 @@ const Cart = () => {
   
       <Link to="/cartItems">
         
-        <button onClick={handleCart} className={styles.cartbtn}>  <img src={cartbox} className={styles.cartlogo} alt="logo"  /> </button>
-      <span style={{fontSize: '24px',color:"white"} }> {quantity}</span>
+        <button onClick={handleCart} className={styles.cartbtn}> 
+        <p className={styles.cartlogo}>< BsFillBucketFill/></p>
+     </button>
+      <span style={{fontSize: '20px',color:"white"} }> {quantity}</span>
 
       </Link>
     </div>

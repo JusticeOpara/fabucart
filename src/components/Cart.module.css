@@ -18,11 +18,17 @@ li {
   color: #3498DB;
 }
 
-.cartIcon  {
+.cartIcon {
   border: none;
   cursor: pointer;
-   background-color: #3498DB; 
-   
+  background-color: #2f9b77;
+  border-radius: 100%;
+  width: 60px;
+  height:50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .cartContainer {
@@ -107,18 +113,22 @@ li {
   justify-content: space-between;
 
 }
-.cartlogo{
-  max-width: 60px;
-  height: auto;
-  color: #41B883;
+
+.cartlogo {
+
+  font-size: 25px;
+  color: #fff;
   /* border-radius: 50px; */
-  background-color: #3498DB;
-  padding:0px;
+  border-color: #2f9b77;
+  background-color: #2f9b77;
+  padding: 0px;
   border: none;
 }
-.cartbtn{
-  border:none;
-  padding:0px;
+
+.cartbtn {
+  border: none;
+  padding: 0px;
+  
 }
 
 .totalPrice {
