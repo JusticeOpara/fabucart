@@ -41,4 +41,11 @@
   font-family: sans-serif;
 }
 
+@media (max-width:480px){
+  .layout{
+    gap:20px;
+  }
+}
+  
+
 

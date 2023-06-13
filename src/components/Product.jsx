@@ -31,12 +31,13 @@ const Product = ({ name, id, imgURL, price }) => {
       imgURL
     }))
   }
+  console.log(addToCart, "--ADDTOCART")
 
 
   const removeCart = () => {
     dispatch(cartActions.removeCart(id));
   };
-
+  console.log(removeCart, "REMOVE FROM CART")
 
 
   return (
@@ -54,13 +55,26 @@ const Product = ({ name, id, imgURL, price }) => {
 
       <div className={styles.productBtn}>
 
-        {qty === 0 ? (
+
+        {/* {qty === 0 ? (
           <button className={styles.addCart} onClick={() => { addToCart(id); addfCart() }} > Add to Cart </button>
         ) : (<div className="">
-
+===
           <div> <button className={styles.removeCart} onClick={() => { removeCart(id); removefCart() }} > Remove From Cart </button> </div>
 
-        </div>)}
+        </div>)} */}
+       {qty === 0 ? (
+      <button className={styles.addCart} onClick={() => { addToCart(id); addfCart() }}>Add to Cart</button>
+
+       ): (
+          <div>
+            <div>
+              <button className={styles.removeCart} onClick={() => { removeCart(id); removefCart() }}>Remove From Cart</button>
+            </div>
+          </div>
+
+        )}
+
       </div>
       <Toaster />
 
