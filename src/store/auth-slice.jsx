@@ -9,6 +9,7 @@ const authSlice = createSlice({
      loggedIn(state){
          state.IsLoggedIn = true
      },
+     
      loggedOut(state){
          state.IsLoggedOut = false
      }

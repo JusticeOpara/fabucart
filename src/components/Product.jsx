@@ -16,7 +16,7 @@ const Product = ({ name, id, imgURL, price }) => {
   //    function getItemsQty  (id) {
   //   return cartItems.find(item => item.id ===id)
   //  }
-  const qty = useSelector(state => state.cart.totalQuantity)?.qty || 0;
+  const qty = useSelector(state => state.cart.itemList)?.qty || 0;
   console.log(qty, "--quantity")
 
 

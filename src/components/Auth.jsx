@@ -14,6 +14,7 @@ const Auth = () => {
     dispatch(authActions.loggedIn())
 
   }
+  
   const handleClick = () => {
     navigate('/layout');
   }

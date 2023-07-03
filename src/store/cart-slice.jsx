@@ -52,7 +52,6 @@ const cartSlice = createSlice({
                 }
             }
 
-
             saveCartToLocalStorage(state.itemsList);
         },
 
