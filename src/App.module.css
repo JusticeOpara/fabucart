@@ -6,3 +6,17 @@
 
 }
 
+.loadingPage{
+background-color: #3498DB;
+width: 100%;
+height: 100vh;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+.loading{
+
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}

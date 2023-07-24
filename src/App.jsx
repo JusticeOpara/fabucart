@@ -1,45 +1,50 @@
 import React from "react";
 import styles from "./App.module.css";
-import Auth from "./components/Auth";
 import Layout from "./components/Layout";
 import { Routes, Route } from 'react-router-dom'
 import CartItems from "./components/CartItems";
 import Login from "./pages/Login";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import SignUp from "./pages/SiginUp";
-
-
+import { useState, useEffect } from "react"
+import FadeLoader from "react-spinners/MoonLoader"
 function App() {
 
-const {IsOpen,contentType} =  useSelector((state)=>state.modal)
-console.log(contentType,"--contentType")
-  // const IsLoggedIn = useSelector((state) => state.auth.IsLoggedIn)
-  // console.log(IsLoggedIn, "--I Don Log am in")
+  const { IsOpen, contentType } = useSelector((state) => state.modal)
+  const [ifLoading, setIfLoading] = useState(false)
 
+  useEffect(() => {
+    // Simulate a 2-second delay
+    const loadingTimer = setTimeout(() => {
+      setIfLoading(true);
+    }, 3000);
 
-  // const showCart = useSelector((state) => state.cart.showCart)
-  // console.log(showCart, "--SHOWCART")
- 
+    return () => clearTimeout(loadingTimer);
+  }, []);
 
   return (
+
     <div className={styles.App}>
 
       {IsOpen && contentType === 'login' && <Login />}
       {IsOpen && contentType === 'signup' && <SignUp />}
-             
-      <Routes>
 
-        {/* {!IsLoggedIn && <Route path='*' element={<Auth />} />}
-        {IsLoggedIn && <Route path='/' element={<Layout />} />}
-        <Route path='/cartItems' element={<CartItems />} /> */}
 
-        <Route path='' element={<Auth />} />
+      {ifLoading ?
+        <Routes>
 
-         <Route path='/layout' element={<Layout />} />
+          <Route path='' element={<Layout />} />
 
-        <Route path='/cartItems' element={<CartItems />} />
+          <Route path='/cartItems' element={<CartItems />} />
 
-      </Routes>
+        </Routes> : 
+        
+        <div className={styles.loadingPage}>
+          <FadeLoader speedMultiplier="1" size={50} color='green' className='' />
+          <p  className={styles.loading}> loading... </p>
+        </div>
+
+      }
 
 
 

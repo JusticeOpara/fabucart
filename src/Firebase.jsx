@@ -1,12 +1,11 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged, sendPasswordResetEmail } from "firebase/auth";
 import ReactObserver from 'react-event-observer';
-import { getFirestore,  doc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { signInWithEmailAndPassword } from "firebase/auth"
-// import { sendPasswordResetEmail } from "firebase/auth";
-import { getStorage } from "firebase/storage";
-import { Await } from "react-router-dom";
+// import { sendPasswordResetEmail } from "firebase/auth"
+
 
 
 
@@ -17,8 +16,8 @@ const firebaseConfig = {
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER,
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  
-  
+
+
 };
 
 //  const storage = getStorage(app, "gs://my-custom-bucket")
@@ -73,7 +72,7 @@ export const signIn = async (email, password, username) => {
 
 
 export const signup = async (email, password, username) => {
-  // console.log(email, "--pasword")
+
   try {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
