@@ -1,0 +1,177 @@
+.navbar {
+  background-color: #3498DB;
+  width: 100%;
+  height: 50px;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  width: 12%;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Satoshi', sans-serif;
+  color: #ffffff;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 12%;
+}
+
+.cartlogo {
+  max-width: 50px;
+  height: auto;
+  color: #41B883;
+}
+
+.header {
+  background-color: #41B883;
+  border-radius: 8px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second-path {
+  background-color: crimson;
+}
+
+.cartImage {
+  max-width: 100%;
+  height: auto;
+  /* background-color: #fff;    */
+}
+
+.greetings {
+  font-weight: 500;
+}
+
+.brandbold {
+  font-size: 2.20rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.brandtext {
+  font-size: 1.10rem;
+  /* font-weight: bold; */
+  /* font-family: 'Satoshi', sans-serif; */
+}
+
+.brandname {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.firstpath {
+  color: #ffffff;
+  /* background-color: grey; */
+  font-family: 'Clash Display', sans-serif;
+  padding-left: 30px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 20px;
+  /* align-items: center; */
+  height: 100%;
+  width: 50%;
+}
+
+.percent {
+  color: red;
+}
+
+.headerText {
+  font-family: 'Clash Display', sans-serif;
+  padding: 0%;
+}
+
+.discount {
+  font-size: 30px;
+}
+
+
+
+@media (max-width:480px) {
+
+  .header {
+    background-color: #41B883;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .firstpath {
+    padding: 0px;
+    margin: 0px;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    /* background-color: cyan; */
+  }
+
+  .greetings {
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  .brandname {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    /* line-height: 1.25rem; */
+  }
+
+  .brandbold {
+    font-size: 20px;
+  }
+
+  .discount {
+    font-size: 23px;
+  }
+
+  .cartImage {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width:320px) {
+  .header {
+    height: 100%;
+  }
+
+  .discount {
+    font-size: 20px;
+  }
+
+
+}

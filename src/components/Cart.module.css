@@ -1,0 +1,176 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 10px;
+}
+
+.hero {
+  font-size: 30px;
+  font-weight: 900;
+  color: #3498DB;
+}
+
+.cartIcon {
+  border: none;
+  cursor: pointer;
+  background-color: #2f9b77;
+  border-radius: 100%;
+  width: 60px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartContainer {
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100vw; */
+}
+
+.cartItem {
+  width: 60vw;
+  height: 35vh;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px #ccc;
+  color: #fbeaeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #2f9b77;
+}
+
+.cardItem:hover {
+  box-shadow: 10px 10px 20px #ccc;
+}
+
+
+.text {
+  font-size: .875rem;
+  line-height: 1.25rem;
+
+}
+
+.cartActions {
+  color: white;
+  font-size: 30px;
+  width: 50px;
+  border: none;
+  background-color: #2f9b77;
+  border-radius: 50%;
+}
+
+
+.imageItem {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.imgBox {
+  position: relative;
+  width: 50%;
+  height: 100px;
+}
+
+.amount {
+  font-size: 20px;
+  color: #2f9b77;
+}
+
+.item {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  width: 95%;
+  height: 60%;
+}
+
+.countAction {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.cartlogo {
+
+  font-size: 25px;
+  color: #fff;
+  /* border-radius: 50px; */
+  border-color: #2f9b77;
+  background-color: #2f9b77;
+  padding: 0px;
+  border: none;
+}
+
+.cartbtn {
+  border: none;
+  padding: 0px;
+background-color: red;
+}
+
+.totalPrice {
+
+  width: 200px;
+  height: 60px;
+  background-color: #3498DB;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #ffff;
+}
+
+
+.subItem {
+
+  height: 100%;
+  width: 80%;
+}
+
+@media (max-width:320px) {
+  .cartActions {
+    color: white;
+    font-size: 20px;
+    width: 30px;
+    border: none;
+    background-color: #2f9b77;
+    border-radius: 50%;
+  }
+
+  .countAction {
+    width: 95%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+
+  .text {
+    font-size: 10px;
+  }
+
+}

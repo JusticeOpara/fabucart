@@ -1,0 +1,131 @@
+.productsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
+  font-family: 'Satoshi', sans-serif;
+}
+.productBtn{
+ /* background-color: #2f9b77;  */
+   margin-bottom: 1rem; 
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  /* background-color: blue; */
+  font-size: 15px;
+}
+
+.img {
+  max-width: 50%;
+  height: 8rem;
+  display: block;
+
+}
+
+.price {
+  font-size: 16px;
+  color: #2f9b77;
+  font-weight: 600;
+
+}
+.name{
+ font-size: 13px; 
+}
+.btn {
+  margin-top: 25px;
+  margin-bottom: auto;
+  padding: 10px;
+  color: rgb(53, 40, 40);
+  border: none;
+  cursor: pointer;
+  /* background-color: rgba(21, 26, 42, 0.787); */
+  background-color: #2f9b77;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.card {
+  width: 260px;
+  height: 260px;
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 5px 5px 10px #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  /* color: #3498DB; */
+  /* font-weight: 600; */
+}
+
+.card:hover {
+  box-shadow: 10px 10px 20px #ccc;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aquamarine; */
+}
+
+.orderBtn {
+  width: 200px;
+  background: orangered;
+  border: none;
+  cursor: pointer;
+}
+
+.orderBtn:hover {
+  background: rgb(89, 0, 190);
+}
+.addCart {
+  border: 2px;
+  border-radius: 3rem;
+  padding: 3px;
+  font-size: small;
+  color: #fff;
+  background-color: #2f9b77;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+}
+
+.addCart:hover {
+  background-color: #fff;
+  color: #013D29;
+  border-color: #013D29;
+}
+.removeCart{
+  border-width: 2px;
+  border-radius: 3rem;
+  padding: 3px;
+  font-size: small;
+  color: white;
+  background-color: red;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+
+}
+.removeCart:hover{
+  background-color: white;
+  color: red;
+  border-color: red;
+}
+
+@media(max-width:480px) {
+  .productsContainer{
+    display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-content: center;
+  }
+
+}
