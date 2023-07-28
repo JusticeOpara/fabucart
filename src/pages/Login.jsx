@@ -3,7 +3,7 @@ import styles from "./styles.module.css"
 import { Link } from "react-router-dom"
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { signIn } from "../firebase";
+import { signIn } from "../Firebase";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import { modalActions } from "../store/modal-slice"

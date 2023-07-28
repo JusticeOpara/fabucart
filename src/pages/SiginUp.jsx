@@ -2,7 +2,7 @@ import React from "react"
 import { Formik, Form, Field, validateYupSchema } from 'formik';
 import * as Yup from 'yup';
 import styles from "./styles.module.css"
-import { signup } from "../firebase"
+import { signup } from "../Firebase"
 import { connectFirestoreEmulator } from "firebase/firestore";
 import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
